@@ -1,1 +1,0 @@
-print("Python 3.12 configurado com sucesso!")
