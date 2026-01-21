@@ -664,10 +664,17 @@ export default function App() {
         type="button"
         aria-label="Abrir carrinho"
       >
-        <span className="cartFabIcon">🛒</span>
         <span className="cartFabText">
-          {totals.qty} • {formatBRL(totals.total)}
-        </span>
+  {totals.qty > 0 ? (
+    <>
+      <span className="cartFabQty">{totals.qty} itens</span>
+      <span className="cartFabTotal">{formatBRL(totals.total)}</span>
+    </>
+  ) : (
+    <span className="cartFabTotal">Ver carrinho</span>
+  )}
+</span>
+
       </button>
 
       {/* MODAL DO CARRINHO (mobile) */}
